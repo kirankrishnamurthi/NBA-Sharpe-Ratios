@@ -26,7 +26,7 @@ Above I represent the translated Sharpe Ratio into basketball ($B$) terms. The r
 
 #### How much do free throw attempts impact Harden's scoring?
 
-![harden_dual_plot](./images/james_harden_dual_plot.png)
+![harden_dual_plot](./Images/james_harden_dual_plot.png)
 
 The above two plots take a closer look into James Harden's scoring output during his MVP season. There is no doubt he put up an MVP worthy performance, with multiple 50+ point games in the era before the scoring explosion that we're currently experience. However, the closer examination does reveal that across the season, Harden's "risk-free" (free throw attempts) points accounted for 35% of his total points-per-game. This number doesn't mean too much on it's own, but it does allow us to understand that perhaps on any given night, 35% of James Harden's points could be coming from the free-throw line.
 
@@ -36,13 +36,13 @@ Finally, it would appear that Harden's reliance on the charity stripe to get poi
 
 #### Applications on the Top 30 Scorers from the 2017-2018 Season
 
-![B_2017_Plot](./images/B_Versus_PPG_1718.png)
+![B_2017_Plot](./Images/B_Versus_PPG_1718.png)
 
 Plotted above on the x-axis is are the $B$ for the top 30 scorers (highest PPG) from the 2017-2018 NBA. The y-axis shows their points-per-game, conventional/easiest way to evaluate a player's scoring ability. Our MVP sits in his own layer of the chart, head and shoulders above any competition for points-per-game during his campaign. However, the if we look at this through the lens of players $B$ ratios, there's a different story. While Harden averaged the most PPG, there are 13 players with higher $B$ ratios despite scoring fewer points per game. Given that the components of the $B$ ratio are fairly simple, it is safe to say that all 13 of these players either take fewer free throw attempts per game or their nightly PPG remains consistent throughout the season. This logic is somewhat consistent with the efficient frontier in finance, where superior portfolios offer the best combination of high return with minimized risk.
 
 One aspect of this $B$ ratio model that is fundamentally different from the Sharpe ratio in finance is the dynamic risk-free rate I am using in my analysis. If a portfolio manager is eveluating different portfolio choices, they are most likely going to be using the same risk-free rate to compute excess returns for all portfolios. However, in this model, the $B$ ratios are 100% player specific as each player has their own unique amount of average free throw attempts. Therefore, the risk-free rate in the model ($\mu_{fta}$) is dynamic as it adjusts with each player and produces a corresponding $B$. This is where the lines of basketball and finance do not neatly converge, but if I really wanted to keep it consistent I could use a league-wide average for free throw attempts while keeping the $\mu_{ppg}$ and $\sigma_{ppg}$ measures player specific. The dynamic risk-free rate is an integral part of the model and approach to the analysis, as taking out their respective free throw attempts from their points per game allows us to understand how many points **they are** responsible for versus points that the officiating or defense (unnecessary fouling) may be contributing. 
 
-![Efficient_Frontier](./images/sharpe_components_1718.png)
+![Efficient_Frontier](./Images/sharpe_components_1718.png)
 
 The above plot decomponses the $B$ ratio and plots the excess returns on the y-axis while keeping volatility on the x-axis. This plot is designed to replicate an efficient frontier style plot, except we're looking at excess points per game and not the expected points per game. The difference is important as my goal is to take out "free" points that are measured by a player's free throw attempts. I also broke up the plot into 4 quadrants, assigned 1 through 4 moving clockwise from the top left. This makes quadrant 1 the top left corner, quadrant 2 the top right corner, quadrant 3 the bottom right corner, and quadrant 4 the bottom left corner. The best quadrant to be in is quadrant 1, as players in this quadrant exhibit higher excess points and lower volatility in their scoring. They can be considered the most consistent performers given their low volatility as well as some of the most efficient performers given their lack of reliance on free throws to get points. 
 
@@ -57,7 +57,7 @@ Finally, but maybe my favorite, takeaway from this season's $B$ ratio analysis w
 ### Contemporary Applications for the Current Season
 ---
 
-!['Joint_Plots_2K23](./images/joint_sharpe_plots_for_2K23.png)
+!['Joint_Plots_2K23](./Images/joint_sharpe_plots_for_2K23.png)
 
 The above plot applies the $B$ ratio to the 2022-2023 NBA season and decomposes the components for the top 30 players in terms of their average PPG. Not all players have played the same amount of games which does have an unfair impact on the volatility for those who have played more games, but for the most part all players in this sample have played sufficient games to get a reliable estimate. 
 
